@@ -61,7 +61,7 @@ def request_started_handler(sender, environ, **kwargs):
         method=environ['REQUEST_METHOD'],
         query_string=environ['QUERY_STRING'],
         user_id=getattr(user, 'id', None),
-        remote_ip=environ[REMOTE_ADDR_HEADER],
+        remote_ip=environ.get(REMOTE_ADDR_HEADER),
         datetime=timezone.now()
     )
 
