@@ -83,6 +83,10 @@ Below are some of the settings you may want to use. These should be defined in y
 
 * `DJANGO_EASY_AUDIT_REQUEST_EVENT_LIST_FILTER`
 
+* `DJANGO_EASY_AUDIT_REMOTE_ADDR_HEADER`
+
+  Default is `REMOTE_ADDR`. change in your settings to `HTTP_X_FORWARDED_FOR` for collect real remote ip
+
   Changeview filters configuration.
   Used to remove filters when the corresponding list of data would be too long.
   Defaults are:
